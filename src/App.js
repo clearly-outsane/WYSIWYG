@@ -11,7 +11,7 @@ const App = () => {
   const [editorState, setStateEditor] = useState(EditorState.createEmpty());
 
   const onEditorStateChange = (editorState) => {
-    console.log("State", editorState);
+    console.log("Current Editor State", editorState);
     setStateEditor(editorState);
   };
   const _uploadImageCallBack = (file) => {
@@ -26,7 +26,7 @@ const App = () => {
       file: file,
       localSrc: URL.createObjectURL(file),
     };
-    console.log(imageObject);
+    console.log("Image uploaded object:", imageObject);
     uploadedImages.push(imageObject);
 
     setImages(uploadedImages);
